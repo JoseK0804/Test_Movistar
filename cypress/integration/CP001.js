@@ -18,6 +18,7 @@ describe(`CP001`, ()=> {
     beforeEach(()=> {
         cy.log(`Empezo el test`);
         cy.visit(`/`);
+        cy.viewport(1000, 660);
     })
 
     // Se ejecuta despues de todas las pruebas
@@ -35,5 +36,7 @@ describe(`CP001`, ()=> {
         productPage.validarNameProduct(`A52`);
         // Metodo para validar que se pueda pagar hasta en 12 cuotas
         productPage.validarInfo(`12 cuotas`);
+        // Tomar captura de pantalla del resultado final
+        cy.screenshot('CP001')
     });
 })

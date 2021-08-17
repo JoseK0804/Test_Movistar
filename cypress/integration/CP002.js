@@ -17,6 +17,7 @@ describe(`CP002`, ()=> {
     beforeEach(()=> {
         cy.log(`Empezo el test`);
         cy.visit(`/`);
+        cy.viewport(1000, 660);
     })
 
     // Se ejecuta despues de todas las pruebas
@@ -37,5 +38,7 @@ describe(`CP002`, ()=> {
             const articles = parseFloat($span.text());
             cy.log(`Hay ` + articles + ` articulos`);
         })
+        // Tomar captura de pantalla del resultado final
+        cy.screenshot('CP002')
         });
     })

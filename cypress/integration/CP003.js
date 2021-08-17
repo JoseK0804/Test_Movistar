@@ -17,6 +17,7 @@ describe(`CP003`, ()=> {
     beforeEach(()=> {
         cy.log(`Empezo el test`);
         cy.visit(`/`);
+        cy.viewport(1000, 660);
     })
  
     // Se ejecuta despues de todas las pruebas
@@ -34,5 +35,7 @@ describe(`CP003`, ()=> {
         productPage.selectOption(`Credicoop`, `Visa`);
         // Metodo para validar que no diga 60 en las cuotas
         productPage.validarCuotas(`60`);
+        // Tomar captura de pantalla del resultado final
+        cy.screenshot('CP003')
     });
 })

@@ -17,6 +17,7 @@ describe(`CP004`, ()=> {
     beforeEach(()=> {
         cy.log(`Empezo el test`);
         cy.visit(`/`);
+        cy.viewport(1000, 660);
     })
 
     // Se ejecuta despues de todas las pruebas
@@ -30,5 +31,7 @@ describe(`CP004`, ()=> {
         indexPage.search(`Test_No_Result`);
         // Metodo para validar que la busqueda no arrojo ningun valor
         searchResultPage.validarSearchNoResult(`Su búsqueda no devolvió resultados`);
+        // Tomar captura de pantalla del resultado final
+        cy.screenshot('CP004')
     });
 })
