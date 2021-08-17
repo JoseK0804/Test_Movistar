@@ -1,0 +1,19 @@
+{
+  "name": "movistar_test",
+  "version": "1.0.0",
+  "description": "Pruebas Automatizadas de Movistar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "Movistar"
+  ],
+  "author": "Jose Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.3.0"
+  }
+}
